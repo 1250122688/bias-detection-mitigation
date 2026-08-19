@@ -1,0 +1,5 @@
+n_neighbors,consistency_true_labels,consistency_predictions
+3,0.7797,0.9291
+5,0.7331,0.9084
+10,0.6994,0.8871
+25,0.6747,0.8664

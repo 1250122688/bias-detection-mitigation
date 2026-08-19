@@ -1,0 +1,5 @@
+finding,evidence,library
+Model reproduces the label gap without seeing the attribute,predicted gap 0.204 vs 0.213 in the labels,Fairlearn (MetricFrame + proxy audit)
+Group membership explains <1% of individual benefit inequality,between-group GEI / total GEI at alpha=2,AIF360 (entropy decomposition)
+A mitigation can equalise its target by approving zero women,CalibratedEqOdds(fpr): female selection rate 0.000,AIF360 (post-processing) + panel of metrics
+Reductions are the same code in both libraries,"identical predictions, verified above",both

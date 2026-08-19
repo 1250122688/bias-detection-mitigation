@@ -1,0 +1,7 @@
+sex,race,selection_rate,true_positive_rate,false_positive_rate,accuracy,count
+Female,GroupA,0.3433,0.5953,0.2089,0.723,1101.0
+Female,GroupB,0.2771,0.5217,0.1833,0.7349,498.0
+Female,GroupC,0.2542,0.5385,0.1486,0.7667,240.0
+Male,GroupA,0.5593,0.7926,0.2272,0.7844,1568.0
+Male,GroupB,0.4571,0.7293,0.221,0.7559,676.0
+Male,GroupC,0.4424,0.7328,0.2421,0.7477,321.0

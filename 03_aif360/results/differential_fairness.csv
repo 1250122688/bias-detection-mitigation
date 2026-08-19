@@ -1,0 +1,4 @@
+sensitive_attribute,EDF_in_training_data,EDF_in_predictions,bias_amplification
+sex,0.5127,0.5133,-0.0127
+age_group,0.2505,0.248,-0.1431
+race,0.2697,0.2684,-0.0414

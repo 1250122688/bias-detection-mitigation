@@ -1,0 +1,7 @@
+sensitive_attribute,alpha,total_GEI,between_group_GEI,within_group_GEI,share_between_group
+sex,1,0.17459,1.2e-05,0.174578,0.0070%
+sex,2,0.124869,1.2e-05,0.124857,0.0098%
+age_group,1,0.17459,0.000257,0.174333,0.1472%
+age_group,2,0.124869,0.00026,0.124609,0.2083%
+race,1,0.17459,4.6e-05,0.174544,0.0266%
+race,2,0.124869,4.6e-05,0.124823,0.0372%

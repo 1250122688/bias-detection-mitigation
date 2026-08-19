@@ -1,0 +1,4 @@
+sensitive_attribute,fair_SPD_no_discrimination,observed_SPD_in_labels,model_SPD_in_predictions,amplification
+sex,-0.1337,-0.2135,-0.204,0.0095
+age_group,-0.0478,-0.1022,-0.044,0.0582
+race,-0.0646,-0.1216,-0.0989,0.0227

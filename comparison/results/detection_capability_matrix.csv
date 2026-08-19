@@ -1,0 +1,21 @@
+category,capability,fairlearn,aif360,note
+Core parity,Demographic parity difference / ratio,yes,yes,identical values; AIF360 calls the ratio disparate_impact
+Core parity,Equalized odds,yes,yes,Fairlearn aggregates worst-case or mean; AIF360 reports average odds
+Core parity,Equal opportunity,yes,yes,identical values
+Error rates,TPR / FPR / FNR differences,yes,yes,both complete
+Error rates,False discovery / false omission rate differences,no,yes,the predictive-value view of fairness
+Error rates,Score-based (generalized) error rates,no,yes,needed to interpret CalibratedEqOdds
+Extensibility,Disaggregate an arbitrary user metric,yes,no,"MetricFrame takes any (y_true, y_pred) callable"
+Extensibility,Promote a custom metric to a fairness metric,yes,no,make_derived_metric; AIF360 requires subclassing
+Scope,Dataset-level metrics before any model,partial,yes,Fairlearn only via the y_pred=y_true convention
+Scope,Intersectional subgroups,yes,yes,Fairlearn native multi-column; AIF360 via intersection() helper
+Scope,Conditional / control-variable metrics,yes,partial,control_features works on any metric; AIF360 has one fixed CDD
+Individual,Consistency (kNN individual fairness),no,yes,"needs the feature matrix, structurally out of MetricFrame's reach"
+Individual,Generalized entropy / Theil index,no,yes,inequality of the individual benefit vector
+Individual,Between- vs within-group decomposition,no,yes,showed group membership explains <1% of benefit inequality here
+Subgroup,Differential fairness (all subgroups at once),no,yes,smoothed EDF plus bias amplification
+Subgroup,Automated bias discovery,no,yes,MDSS bias_scan finds the subgroup without being told where to look
+Statistics,Bootstrap confidence intervals,yes,no,"AIF360 reports point estimates only, everywhere"
+Statistics,Group sample sizes,yes,yes,count / num_instances
+Ergonomics,Accepts plain pandas with string categories,yes,partial,AIF360 classic API needs numeric encoding; its sklearn API is lighter
+Ergonomics,Built-in comparison plots,yes,no,"plot_model_comparison, plot_threshold_optimizer"

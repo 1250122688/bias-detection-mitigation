@@ -1,0 +1,4 @@
+sensitive_attribute,n_groups,demographic_parity_difference,demographic_parity_ratio,equalized_odds_difference,equalized_odds_ratio,equal_opportunity_difference,equal_opportunity_ratio,true_positive_rate_difference,false_positive_rate_difference,selection_rate_difference
+sex,2,0.204,0.606,0.2007,0.7402,0.2007,0.7402,0.2007,0.0346,0.204
+age_group,2,0.044,0.9002,0.0209,0.9077,0.0155,0.9784,0.0155,0.0209,0.044
+race,3,0.1084,0.7696,0.0687,0.9064,0.0687,0.9064,0.0687,0.0203,0.1084

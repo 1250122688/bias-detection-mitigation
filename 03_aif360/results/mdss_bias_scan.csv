@@ -1,0 +1,5 @@
+scanned_against,direction,mdss_score,n_rows,share_of_test_set,reference_approval_rate,model_approval_rate,mean_model_score,definition
+observed labels,over_predicted,20.3902,742,0.1685,0.2898,0.3935,0.3749,"sex=['Female']; region=['rural', 'suburban']; credit_band=['high', 'low']"
+observed labels,under_predicted,28.4652,904,0.2053,0.7699,0.75,0.6662,"gap_band=['none', 'short']; sex=['Male']; race=['GroupA']; age_group=['under_55']; credit_band=['high', 'mid']"
+oracle fair labels,over_predicted,6.0265,104,0.0236,0.0962,0.0481,0.218,"employment_type=['fulltime', 'selfemployed']; income_band=['high', 'mid']; region=['suburban']; credit_band=['low']; race=['GroupA']; age_group=['under_55']; gap_band=['long', 'none']"
+oracle fair labels,under_predicted,81.5122,2933,0.666,0.6989,0.6454,0.5967,"credit_band=['high', 'mid']"

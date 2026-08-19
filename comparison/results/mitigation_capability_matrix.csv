@@ -1,0 +1,18 @@
+stage,capability,fairlearn,aif360,note
+pre-processing,Instance reweighting,absent,works,"AIF360 Reweighing; cheapest useful mitigation, no Fairlearn equivalent"
+pre-processing,Linear correlation removal,works,absent,Fairlearn CorrelationRemover
+pre-processing,Distributional (quantile) repair,absent,works,AIF360 DisparateImpactRemover; handles non-linear proxies
+pre-processing,Learned fair representations,works,works,same paper (Zemel 2013): PrototypeRepresentationLearner vs LFR
+pre-processing,Optimized preprocessing (convex),absent,not tested,"AIF360 OptimPreproc needs cvxpy, not installed"
+in-processing,"Reductions, estimator-agnostic",works,works,AIF360's ExponentiatedGradientReduction wraps Fairlearn; identical output
+in-processing,Grid of deterministic models,works,absent,Fairlearn GridSearch returns the whole frontier
+in-processing,Regularisation-based,absent,works,AIF360 PrejudiceRemover; tied to its own logistic model
+in-processing,Rich subgroup fairness,absent,degenerate,AIF360 GerryFairClassifier collapsed to a constant classifier
+in-processing,Meta-algorithm with fairness guarantee,absent,broken,AIF360 MetaFairClassifier raises TypeError for every tau > 0
+in-processing,Adversarial debiasing,not tested,not tested,needs torch / tensorflow respectively; both skipped
+post-processing,Threshold optimisation,works,works,Fairlearn ThresholdOptimizer vs AIF360 EqOddsPostprocessing
+post-processing,Calibration-preserving,absent,works,AIF360 CalibratedEqOddsPostprocessing
+post-processing,Reject-option (boundary band) flipping,absent,works,AIF360 RejectOptionClassification; best method on this dataset
+post-processing,Choose which error cost to equalise,partial,works,Fairlearn via constraint choice; AIF360 via explicit cost_constraint
+workflow,Works without a held-out calibration split,works,absent,"AIF360 post-processors mis-calibrate on in-sample scores, silently"
+workflow,Deterministic predictions by default,partial,works,Fairlearn ExponentiatedGradient is randomised; needs an explicit seed

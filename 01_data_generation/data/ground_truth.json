@@ -1,0 +1,100 @@
+{
+  "seed": 42,
+  "n_raw": 16000,
+  "n_final": 14677,
+  "n_train": 10273,
+  "n_test": 4404,
+  "target_base_rate": 0.55,
+  "calibration": {
+    "experience_cap_years": 10,
+    "horizon_penalty_per_year_over_50": 0.02,
+    "income_age_penalty_per_year_over_50": 0.01,
+    "female_long_gap_share": 0.75,
+    "male_long_gap_share": 0.12
+  },
+  "mechanisms": {
+    "B1_label_bias": {
+      "description": "Qualified applicants in unprivileged groups have their approval flipped 1 -> 0.",
+      "flip_probabilities": {
+        "female": 0.22,
+        "senior": 0.15,
+        "race_GroupB": 0.1,
+        "race_GroupC": 0.18
+      },
+      "composition": "multiplicative across attributes",
+      "rows_flipped": 1379
+    },
+    "B2_measurement_bias": {
+      "description": "credit_score is a noisy reading of oracle_credit_score_true.",
+      "noise_sd_base": 12.0,
+      "noise_sd_female_penalty": 20.0,
+      "noise_sd_minority_penalty": 22.0
+    },
+    "B3_proxy_leakage": {
+      "description": "Non-sensitive features encode sensitive attributes.",
+      "proxies": {
+        "sex": [
+          "career_gap_months",
+          "employment_type"
+        ],
+        "race": [
+          "region"
+        ]
+      },
+      "recovery_auc": {
+        "sex": 0.877,
+        "age_group": 0.988,
+        "race": 0.711
+      }
+    },
+    "B4_representation_bias": {
+      "description": "Non-uniform row dropout.",
+      "drop_high_income_female": 0.4,
+      "drop_group_c": 0.18,
+      "rows_dropped": 1323
+    }
+  },
+  "realised_disparities": {
+    "sex": {
+      "observed_rate_by_group": {
+        "Female": 0.3185,
+        "Male": 0.532
+      },
+      "fair_rate_by_group": {
+        "Female": 0.4402,
+        "Male": 0.5739
+      },
+      "observed_statistical_parity_difference": -0.2135,
+      "fair_statistical_parity_difference": -0.1337,
+      "gap_attributable_to_B1": 0.0798
+    },
+    "age_group": {
+      "observed_rate_by_group": {
+        "55_plus": 0.3599,
+        "under_55": 0.4621
+      },
+      "fair_rate_by_group": {
+        "55_plus": 0.4792,
+        "under_55": 0.527
+      },
+      "observed_statistical_parity_difference": -0.1022,
+      "fair_statistical_parity_difference": -0.0478,
+      "gap_attributable_to_B1": 0.0544
+    },
+    "race": {
+      "observed_rate_by_group": {
+        "GroupA": 0.4882,
+        "GroupB": 0.3845,
+        "GroupC": 0.3487
+      },
+      "fair_rate_by_group": {
+        "GroupA": 0.543,
+        "GroupB": 0.4819,
+        "GroupC": 0.4749
+      },
+      "observed_statistical_parity_difference": -0.1216,
+      "fair_statistical_parity_difference": -0.0646,
+      "gap_attributable_to_B1": 0.057
+    }
+  }
+}

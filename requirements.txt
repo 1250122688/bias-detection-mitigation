@@ -1,0 +1,33 @@
+# Exact versions this comparison was produced with, on Python 3.10.5.
+#
+#   python -m pip install -r requirements.txt
+#
+# Only fairlearn, aif360 and BlackBoxAuditing are specific to this project;
+# the rest is a standard scientific stack and is listed so a result can be
+# reproduced exactly rather than approximately.
+
+fairlearn==0.14.0
+aif360==0.6.1
+
+# Required by aif360's DisparateImpactRemover. Installed via the extra:
+#   pip install "aif360[DisparateImpactRemover]"
+BlackBoxAuditing==0.1.54
+
+numpy==2.2.5
+pandas==2.2.3
+scipy==1.15.2
+scikit-learn==1.6.1
+matplotlib==3.10.1
+seaborn==0.13.2
+
+# Needed only to execute the notebooks.
+jupyterlab==4.4.4
+notebook==7.4.4
+ipykernel==6.29.5
+
+# Deliberately NOT installed, and the reason each is absent:
+#   torch        -> fairlearn.adversarial.AdversarialFairnessClassifier
+#   tensorflow   -> aif360 AdversarialDebiasing
+#   cvxpy        -> aif360 OptimPreproc
+# Adding any of them enables the corresponding algorithm; the notebooks note
+# where they would slot in.

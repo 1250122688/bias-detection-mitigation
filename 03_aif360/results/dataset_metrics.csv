@@ -1,0 +1,7 @@
+sensitive_attribute,split,n_instances,n_privileged,n_unprivileged,base_rate_overall,base_rate_privileged,base_rate_unprivileged,statistical_parity_difference,disparate_impact,smoothed_EDF
+sex,train,10273,5980,4293,0.4426,0.5318,0.3184,-0.2133,0.5988,0.5127
+sex,test,4404,2565,1839,0.4432,0.5326,0.3187,-0.2139,0.5983,0.5133
+age_group,train,10273,8337,1936,0.4426,0.4619,0.3595,-0.1024,0.7783,0.2505
+age_group,test,4404,3575,829,0.4432,0.4624,0.3607,-0.1017,0.78,0.248
+race,train,10273,6224,4049,0.4426,0.4881,0.3727,-0.1154,0.7635,0.2697
+race,test,4404,2669,1735,0.4432,0.4886,0.3735,-0.1151,0.7644,0.2684

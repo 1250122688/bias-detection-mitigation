@@ -1,0 +1,4 @@
+sensitive_attribute,accuracy_difference,accuracy_group_min,recall_group_min,f1_group_min,custom_cost_group_max,custom_cost_difference,custom_cost_ratio
+sex,0.0404,0.7319,0.5717,0.5761,0.814,0.1014,0.8755
+age_group,0.0108,0.7467,0.699,0.6656,0.7706,0.0831,0.8922
+race,0.0121,0.747,0.6659,0.6566,0.7675,0.0598,0.9221
